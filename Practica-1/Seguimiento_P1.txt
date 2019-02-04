@@ -9,5 +9,4 @@
     escucha en el puerto 8080 para verlo localhost:8080 en navegador
     extraemos características de cabeceras
     Aprender a solicitar url
-      Saber generar el fichero generando una respuesta
-      
+    Saber generar el fichero generando una respuesta
