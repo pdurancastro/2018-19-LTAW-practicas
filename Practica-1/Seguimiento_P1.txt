@@ -7,3 +7,5 @@
   terminal ---> node fs_test6.js
   creamos el servidor_nulo para probarlo
     escucha en el puerto 8080 para verlo localhost:8080 en navegador
+    extraemos características de cabeceras
+    
