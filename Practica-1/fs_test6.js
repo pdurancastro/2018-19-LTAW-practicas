@@ -5,6 +5,7 @@ fs.readFile('test2.txt', 'utf8', (err, data) => {
     if (err) {
       console.log()
       console.log("-------> ERROR!!")
+      //err.message imprime el error sucedido
       console.log(err.message)
       console.log()
     }

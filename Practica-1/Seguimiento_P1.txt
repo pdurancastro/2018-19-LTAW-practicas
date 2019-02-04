@@ -1,0 +1,7 @@
+1ºClase
+  Hacer la web 1 con su servidor y ver que funciona
+  node_modules
+
+2ºClase
+  Lectura de ficheros con tratamiento de errores fs_test
+  terminal ---> node fs_test6.js
