@@ -34,11 +34,11 @@ http.createServer(function (req, res) {
       return res.end();
   //necesito gestionar ficheros que no existan por ejemplo hola.html
   //viendo
-//<<<<<<< HEAD
+
     });
-//=======
+
   });
-//>>>>>>> d6d4eed72e7ed4f4dd7d33c974ce3caf25ad3911
+
   //res.writeHead(200, {'Content-Type': 'text/html'});
   //res.write("La fecha y hora es: " + dt.myDateTime() +"\n\n");
   //res.end();
