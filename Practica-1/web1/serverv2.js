@@ -14,18 +14,30 @@ http.createServer(function (req, res) {
  var filename = "." + q.pathname;
  console.log(filename)
 
-  fs.readFile(filename, function(err, data) {
-    if (err){
-      res.writeHead(404, {'Content-Type': 'text/html'});
-      return res.end("404 Not Found");
-    }
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(data);
-    return res.end();
+ if (filename == "./"){
+   console.log("-->Estoy en el INDEX")
+   fs.readFile("CV.html", function(err, data) {
+     //console.log("-->estoy leyendo")
+     res.writeHead(200, {'Content-Type': 'text/html'});
+     res.write(data);
+     return res.end();
+   });
+
+ }else{
+    fs.readFile(filename, function(err, data) {
+      if (err){
+        res.writeHead(404, {'Content-Type': 'text/html'});
+        return res.end("404 Not Found");
+      }
+      res.writeHead(200, {'Content-Type': 'text/html'});
+      res.write(data);
+      return res.end();
   //necesito gestionar ficheros que no existan por ejemplo hola.html
-  });
+  //viendo
+    });
   //res.writeHead(200, {'Content-Type': 'text/html'});
   //res.write("La fecha y hora es: " + dt.myDateTime() +"\n\n");
   //res.end();
   //console.log("Peticion atendida")
+  }
 }).listen(8080);
