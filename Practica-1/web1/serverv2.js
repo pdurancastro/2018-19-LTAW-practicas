@@ -14,11 +14,19 @@ http.createServer(function (req, res) {
  var filename = "." + q.pathname;
  console.log(filename)
 
+
+ var mime = { //Tipos de mime o peticiones
+   'html':'text/html',
+   'png':'image/png',
+   'jpg':'image/png',
+   'css':'text/css'
+ }
+
  if (filename == "./"){
    console.log("-->Estoy en el INDEX")
    fs.readFile("CV.html", function(err, data) {
      //console.log("-->estoy leyendo")
-     res.writeHead(200, {'Content-Type': 'text/html'});
+     res.writeHead(200, {'Content-Type': mime});
      res.write(data);
      return res.end();
    });
@@ -26,18 +34,17 @@ http.createServer(function (req, res) {
  }else{
     fs.readFile(filename, function(err, data) {
       if (err){
-        res.writeHead(404, {'Content-Type': 'text/html'});
+        res.writeHead(404, {'Content-Type': mime});
         return res.end("404 Not Found");
       }
-      res.writeHead(200, {'Content-Type': 'text/html'});
+
+
+
+      res.writeHead(200, {'Content-Type': mime});
       res.write(data);
       return res.end();
-  //necesito gestionar ficheros que no existan por ejemplo hola.html
-  //viendo
+
     });
-  //res.writeHead(200, {'Content-Type': 'text/html'});
-  //res.write("La fecha y hora es: " + dt.myDateTime() +"\n\n");
-  //res.end();
-  //console.log("Peticion atendida")
+
   }
 }).listen(8080);
