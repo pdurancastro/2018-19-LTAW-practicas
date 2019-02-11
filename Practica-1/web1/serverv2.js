@@ -24,7 +24,7 @@ http.createServer(function (req, res) {
 
  if (filename == "./"){
    console.log("-->Estoy en el INDEX")
-   fs.readFile("CV.html", function(err, data) {
+   fs.readFile("index.html", function(err, data) {
      //console.log("-->estoy leyendo")
      res.writeHead(200, {'Content-Type': mime});
      res.write(data);
@@ -37,7 +37,6 @@ http.createServer(function (req, res) {
         res.writeHead(404, {'Content-Type': mime});
         return res.end("404 Not Found");
       }
-
 
 
       res.writeHead(200, {'Content-Type': mime});
