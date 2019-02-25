@@ -1,13 +1,18 @@
 from django.http import HttpResponse
 from django.template import Template, Context
 from django.template.loader import get_template
+from django.shortcuts import render
 
 
 def index(request):
-    t = get_template('main.html')
-    c = {'user': 'Obijuan'}
-    html = t.render(c)
-    return HttpResponse(html)
+    #-----version anterior
+
+    #t = get_template('main.html')
+    #c = {'user': 'Obijuan'}
+    #html = t.render(c)
+    #return HttpResponse(html)
+
+    return render(request, 'main.html', {'user':'Obijuan'})
 
 
 def mi_funcion(request):
