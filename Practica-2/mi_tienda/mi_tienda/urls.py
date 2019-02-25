@@ -19,12 +19,14 @@ from django.contrib import admin
 from mi_tienda.views import mi_funcion
 from mi_tienda.views import mi_producto
 from mi_tienda.views import saludo
+from mi_tienda.views import index
 
 
 
 """Definir las URLS de la tienda """
 """ r'^admin/ r--> Expresion regular, admin/ --> debe estar al comienzo  """
 urlpatterns = [
+    url(r'^main/', index),
     url(r'^producto/(\d{1,2})/', mi_producto),
     url(r'^hola/', mi_funcion),
     url(r'^saludo/', saludo),

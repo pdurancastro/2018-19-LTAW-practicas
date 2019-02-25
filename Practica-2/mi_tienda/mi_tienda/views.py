@@ -2,6 +2,18 @@ from django.http import HttpResponse
 from django.template import Template, Context
 
 
+def index(request):
+    fp = open('/home/alumnos/pcastro/github/2018-19-LTAW-practicas/Practica-2/mi_tienda/mi_tienda/templates/main.html')
+    t = Template(fp.read())
+    fp.close()
+    c = Context({'user': 'Obijuan'})
+    html = t.render(c)
+    return HttpResponse(html)
+
+#-- Resto del fichero....
+
+
+
 def mi_funcion(request):
     html = "Hola! Esto es una prueba"
 
