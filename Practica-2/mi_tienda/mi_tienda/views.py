@@ -1,17 +1,13 @@
 from django.http import HttpResponse
 from django.template import Template, Context
+from django.template.loader import get_template
 
 
 def index(request):
-    fp = open('/home/alumnos/pcastro/github/2018-19-LTAW-practicas/Practica-2/mi_tienda/mi_tienda/templates/main.html')
-    t = Template(fp.read())
-    fp.close()
-    c = Context({'user': 'Obijuan'})
+    t = get_template('main.html')
+    c = {'user': 'Obijuan'}
     html = t.render(c)
     return HttpResponse(html)
-
-#-- Resto del fichero....
-
 
 
 def mi_funcion(request):
