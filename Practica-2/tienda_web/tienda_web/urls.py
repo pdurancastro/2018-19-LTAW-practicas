@@ -20,15 +20,19 @@ from tienda_web.views import mi_funcion
 from tienda_web.views import mi_producto
 from tienda_web.views import saludo
 from tienda_web.views import leer_html
+from tienda_web.views import index
+
 
 
 
 """Definir las URLS de la tienda """
 """ r'^admin/ r--> Expresion regular, admin/ --> debe estar al comienzo  """
 urlpatterns = [
+    url(r'^main/', index),
     url(r'^producto/(\d{1,2})/', mi_producto),
     url(r'^hola/', mi_funcion),
     url(r'^saludo/', saludo),
     url(r'^leer_html/', leer_html),
+    url(r'^index/', index),
     url(r'^test/', include(admin.site.urls)),
 ]

@@ -55,7 +55,7 @@ ROOT_URLCONF = 'tienda_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/home/alumnos/pcastro/github/2018-19-LTAW-practicas/Practica-2/tienda_web/tienda_web/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
