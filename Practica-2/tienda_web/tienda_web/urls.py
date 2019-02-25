@@ -28,7 +28,7 @@ from tienda_web.views import index
 """Definir las URLS de la tienda """
 """ r'^admin/ r--> Expresion regular, admin/ --> debe estar al comienzo  """
 urlpatterns = [
-    url(r'^main/', index),
+    url(r'^', index),
     url(r'^producto/(\d{1,2})/', mi_producto),
     url(r'^hola/', mi_funcion),
     url(r'^saludo/', saludo),
