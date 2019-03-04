@@ -10,6 +10,9 @@ from mi_tienda.models import Product
 def home_view (request):
     return render(request, "index.html", {})
 
+def trailer (request):
+    return render(request, "trailer.html", {})
+
 def list(request):
     objects = Product.objects.all()
     html = "<p>Listado de articulos</p>"
