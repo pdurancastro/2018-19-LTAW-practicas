@@ -30,90 +30,52 @@
                 <div id="menu">
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/trailer" class="active">Trailer</a></li>
+                        <li><a href="/trailer">Trailer</a></li>
                         <li><a href="/accounts">Accounts</a></li>
                         <li><a href="/patches">Patches</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/contact" class="active">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <div id="index_content">
                     <div class="contact_left">
                         <div class="contact_left_top"></div>
-                        <div class="contact_left_bg blog">
-                            <div class="news_top">
-                                <div class="news_top_left">
-                                    <p class="date_day">1</p>
-                                </div>
-                                <div class="news_top_right">
-                                    <div class="news_title">
-                                        <h3>Fate Grand Order Intro</h3>
-                                        <img src="/static/images/img9.png" alt="" title="" class="pos_left_img"/>
-                                        <p><a href="#">Enjoy the next Openings</a><br />
-                                        I am mordred daughter of King Arthur and one of the protagonists of Fate.<br />
-                                        The following videos are introductions of the games from which you can acquire an account.<br />
-                                        In case of not knowing what to choose..., choose me!</p>
-                                        <video  width="480" height="360" id = "video" src = "/static/opfgo.mp4" preload="auto" controls></video>
+                        <div class="contact_left_bg">
+                            <h3>Contact Us</h3>
+                        <p><a>Send Your information:</a><br />
 
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="read"><a href="#">read more</a></div>
-                            <div style="clear: both"></div>
-                            <div class="bor"></div>
-                            <div class="tegs_box">
-                                <div class="publ">
-                                    <p>by <a href="#">Patricia Durán Castro</a></p>
-                                </div>
-                                <div class="com"><p><a href="#">0 Comments</a></p></div>
-                                <div style="clear: both"></div>
-                            </div>
-                            <div style="clear: both"></div>
+                        <br />
+                        <div id="contact_form">
+                            <form id="form2" method="post" action="#">
+                                <fieldset>
+                                    <input id="con_name" type="text" name="con_name" value="Name:" alt=""/><br />
+                                    <input id="con_email" type="text" name="con_email" value="E-mail:" alt=""/><br />
+                                    <input id="con_website" type="text" name="con_website" value="Subject:" alt=""/><br />
+                                    <textarea id="con_mess" name="con_mess" cols="0" rows="0">Message:</textarea><br />
+                                    <input type="submit" id="contact-submit" value="submit"/>
+                                    <input type="button" id="contact-clear" value="clear"/>
+                                </fieldset>
+                            </form>
+                        </div>
                         </div>
                         <div class="contact_left_bot"></div>
-
                     </div>
                     <div class="contact_right">
                         <div class="contact_right_top"></div>
                         <div class="bg_right">
-                        <div class="contact_right_bg">
-                            <h3>Intro</h3>
-                              <video  width="280" height="200" id = "video" src = "/static/opfeh.mp4" preload="auto" controls></video>
-                            <div class="bor_right"></div>
-                            <div class="box_blog">
-                                <ul>
-                                    <li><a >Fire emblem heroes Book I animation op</a></li>
-                                </ul>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="contact_right_bot"></div>
-
-
-                        <div class="contact_right_top pad_top"></div>
-                        <div class="bg_right">
-                        <div class="contact_right_bg">
-                            <h3>Intro</h3>
-                            <div class="bor_right"></div>
-                            <div class="box_blog">
-                                <video  width="280" height="200" id = "video" src = "/static/opepic7.mp4" preload="auto" controls></video>
-                                <ul>
-                                    <li><a >Epic 7 Opening</a></li>
-                                </ul>
-                            </div>
+                            <div class="contact_right_bg">
+                                <h3>Find Us</h3>
+                                <a href="#"><img src="/static/images/location.jpg" alt="" title="" style="margin-bottom: 10px;"/></a>
+                                <a href="#">View Larger Map</a>
+                                <h2>Our Info</h2>
+                                <p>Camino del Molino</p>
+                                <p>28943 Fuenlabrada</p>
+                                <p>Madrid</p>
+                                <p>Fax: 1(234) 567 8910</p>
+                                <p>E-mail: p.duranc@alumnos.urjc.es</p>
                             </div>
                         </div>
                         <div class="contact_right_bot"></div>
-
-                        <div class="contact_right_top pad_top"></div>
-                        <div class="bg_right">
-
-                        </div>
-                        <div class="contact_right_bot"></div>
-
                     </div>
                     <div style="clear: both"></div>
                 </div>
@@ -141,7 +103,7 @@
                         <div class="foot_col3">
                             <h3>About Us</h3>
                             <div class="pad">
-                                <img src="static/images/icon1.png" title="" alt="" style ="float: left; padding-right: 10px;"/>
+                                <img src="/static/images/icon1.png" title="" alt="" style ="float: left; padding-right: 10px;"/>
                                 <a>“Patricia Duran Castro is an student of ISAM who is learning to create servers and designs web pages.”</a>
                             </div>
 

@@ -1,0 +1,163 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Gacha Shop</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link rel="stylesheet" href="{% static 'styles.css'%}">
+		<!-- Begin JavaScript -->
+
+		<script type="text/javascript" src="lib/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="lib/jquery.tools.js"></script>
+    	<script type="text/javascript" src="lib/cufon.js"></script>
+    	<script type="text/javascript" src="lib/jquery.custom.js"></script>
+
+		<!-- Pirobox setup and styles -->
+
+<script type="text/javascript" src="lib/pirobox.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$().piroBox({
+			my_speed: 400, //animation speed
+			bg_alpha: 0.1, //background opacity
+			slideShow : false, // true == slideshow on, false == slideshow off
+			slideSpeed : 4, //slideshow duration in seconds(3 to 6 Recommended)
+			close_all : '.piro_close,.piro_overlay'// add class .piro_overlay(with comma)if you want overlay click close piroBox
+
+	});
+});
+</script>
+
+<link href="images/style.css" rel="stylesheet" type="text/css" />
+
+<!-- Pirobox setup and styles end-->
+
+    </head>
+    <body>
+        <div id="wrap">
+          <div id="logo">
+              <br />
+              <br />
+              <h1><a href="#">Gacha Shop</a></h1>
+              <br />
+          </div>
+
+            <div id="content_top"></div>
+            <div id="content">
+                <div id="menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/trailer">Trailer</a></li>
+                        <li><a href="/accounts" class="active">accounts</a></li>
+                        <li><a href="/patches">Patches</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+
+                <div id="index_content">
+                    <div id="gallery_top"></div>
+                    <div id="gallery_bg">
+
+                        <div class="row">
+                            <div class="box_img2">
+                                <a class="pirobox_gal1" title="1st Project Image"><img src="/static/images/gal1.png" alt="" title="" /></a>
+                                <h2>Dienne/Luna</h2>
+                                Luna (New) + Diene + 16 Gold Transit Stone + All Gifts Since Day 1 + Un-Linked Price: $115
+                            </div>
+                            <div class="box_razd"></div>
+                            <div class="box_img2">
+                                <a class="pirobox_gal1" title="2nd Project Image"><img src="/static/images/gal2.png" alt="" title="" /></a>
+                                <h2>Luna/Yufine/Haste/Tywin</h2>
+                                 Luna (New) + Yufine + Haste + Tywin + Baal + 17 Gold Transit Stone + Nice Name + All Gifts Since Day 1 + Un-Linked Price: $90
+                            </div>
+                            <div class="box_razd"></div>
+                            <div class="box_img2">
+                                <a class="pirobox_gal1"  title="3rd Project Image"><img src="/static/images/gal3.png" alt="" title="" /></a>
+                                <h2>Luna/Haste/Krau/Destina</h2>
+                                Luna (New) + Haste + Krau + Destina + 13 Gold Transit Stone + All Gifts Since Day 1 + Un-Linked Price: $80
+                            </div>
+                        </div>
+                        <div style="height:10px;"></div>
+                        <div class="row">
+                            <div class="box_img2">
+                                <a class="pirobox_gal1"  title="4th Project Image"><img src="/static/images/gal4.png" alt="" title="" /></a>
+                                <h2>EPIC 17 SSR MERLIN + ART TEAM FOCUS.</h2>
+                                17 x 5* Servant: Jeanne, Vlad,Cu Alter,Jack,Waver,Tamamo 2,Merlin... Price: $240
+                            </div>
+                            <div class="box_razd"></div>
+                            <div class="box_img2">
+                                <a class="pirobox_gal1"  title="5th Project Image"><img src="/static/images/gal5.png" alt="" title="" /></a>
+                                <h2>EPIC 19 SSR Dual Jeanne + Raikou.</h2>
+                                19 x 5* Servant: Jalter,Raikou,Jack,Vlad,Drake,Mordred,...Price: $200
+                            </div>
+                            <div class="box_razd"></div>
+                            <div class="box_img2">
+                                <a class="pirobox_gal1"  title="6th Project Image"><img src="/static/images/gal6.png" alt="" title="" /></a>
+                                <h2>EPIC 11 DUAL JALTER + WAVER</h2>
+                                11 x 5* Servant: Jalter,Jeanne,Vlad,Cu Alter,Waver,Ozzy....Price: $190
+                            </div>
+                        </div>
+                        <div style="height:10px"></div>
+                        <div class="row">
+                            <div class="box_img2">
+                                <a class="pirobox_gal1"  title="7th Project Image"><img src="/static/images/gal7.png" alt="" title="" /></a>
+                                <h2>FEH android acccount with limited units. 52</h2>
+                                Price: 100$
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="gallery_bot"></div>
+                    <div style="clear: both"></div>
+                </div>
+
+                                <div id="footer_box">
+                                    <div id="footer_box_top"></div>
+                                    <div id="footer_box_bg">
+                                        <div class="foot_col1">
+                                            <h3>Contact Information</h3>
+                                            <div class="pad_left" style="background: url(static/images/phone.png) no-repeat left center">
+                                                Phone: 671793000
+                                            </div>
+                                          </br>
+                                            <div class="pad_left" style="background: url(static/images/contact.png) no-repeat left center">
+                                                E-mail: pdurancastro92@gmail.com
+                                            </div>
+                                        </div>
+                                        <div class="foot_col2">
+                                            <h3>Services</h3>
+                                            <ul class="ls">
+                                                <li><a href="#">Service Number 1</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="foot_col3">
+                                            <h3>About Us</h3>
+                                            <div class="pad">
+                                                <img src="/static/images/icon1.png" title="" alt="" style ="float: left; padding-right: 10px;"/>
+                                                <a>“Patricia Duran Castro is an student of ISAM who is learning to create servers and designs web pages.”</a>
+                                            </div>
+
+                                        </div>
+                                        <div class="foot_col4">
+                                            <h3>Follow Us</h3>
+                                              <div class="link2"><a href="#">Be a fan on Facebook</a></div>
+                                              <div class="link4"><a href="https://twitter.com/QueenTohsaka">Follow us on Twitter</a></div>
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
+                                    <div id="footer_box_bot"></div>
+                                </div>
+            </div>
+            <div id="content_bot"></div>
+        </div>
+        <div id="footer">
+                <div class="red_hr"></div>
+                <p>Copyright  2011. <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" title="This page validates as CSS"><abbr title="Cascading Style Sheets">CSS</abbr></a></p>
+                <p>Design by <a href="http://www.metamorphozis.com/" title="Flash Templates">Flash Templates</a>
+                </p>
+            </div>
+    <div style="text-align: center; font-size: 0.75em;">Design downloaded from <a href="http://www.freewebtemplates.com/">free website templates</a>.</div></body>
+</html>

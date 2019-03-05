@@ -13,6 +13,15 @@ def home_view (request):
 def trailer (request):
     return render(request, "trailer.html", {})
 
+def accounts (request):
+    return render(request, "accounts.html", {})
+
+def patches (request):
+    return render(request, "patches.html",{})
+
+def contact (request):
+    return render(request, "contact.html",{})
+
 def list(request):
     objects = Product.objects.all()
     html = "<p>Listado de articulos</p>"
