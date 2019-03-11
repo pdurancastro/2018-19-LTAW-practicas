@@ -75,6 +75,9 @@ http.createServer((req, res) => {
             res.statusCode = 200;
          });
 
+         //-- Cuando recibes este evento se termino de procesar y se genera el
+         //-- mensaje de respuesta
+         
          req.on('end', ()=> {
            //-- Generar el mensaje de respuesta
            res.setHeader('Content-Type', 'text/html')
