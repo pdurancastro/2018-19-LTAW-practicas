@@ -7,12 +7,13 @@ const PORT = 3000
 
 //-- Punto de entrada pricipal
 app.get('/', (req, res) => {
-  res.send('Probando express... ¡¡¡qué fácil!!!')
+  res.sendFile(__dirname + '/index.html');
+  console.log("/index.html")
 })
 
-app.get('/woala', (req,res) =>{
-  res.send('Funciona!!!!');
-  console.log("Punto de entrada /woala!")
+app.get('/woala', (req, res) => {
+  res.send('WOALA!!! Chuck norris approved!!! :-)')
+  console.log("Acceso a /woala")
 })
 
 //-- Lanzar servidor
