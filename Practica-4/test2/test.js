@@ -40,7 +40,6 @@ io.on('connection', function(socket){
    socket.on('new_message', msg => {
      if (msg == "/help"){
        console.log("Devolviendo lista de comandos")
-       //-- Meter div
        var lista_comandos = "<br>" + "/help" + "<br>" + "/list" + "<br>" + "/hello" + "<br>" +"/date"
        socket.emit('new_message',lista_comandos);
      }
@@ -67,6 +66,7 @@ io.on('connection', function(socket){
        io.emit('new_message',"<br>" + msg);
 
      }
+
 
   });
 
