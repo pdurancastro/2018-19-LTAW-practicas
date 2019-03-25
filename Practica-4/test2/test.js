@@ -31,12 +31,22 @@ io.on('connection', function(socket){
 
   //-- Detectar si se ha recibido un mensaje del cliente
    socket.on('new_message', msg => {
+     if (msg == "/help"){
+       console.log("Entrando en help")
+       socket.emit('new_message','Auxilio me desmayo');
+     }
+     else if (msg == "/list") {
+        console.log("Entrando en list")
+     }else{
+       //-- Notificarlo en la consola del servidor
+       console.log("Mensaje recibido: " + msg)
 
-   //-- Notificarlo en la consola del servidor
-   console.log("Mensaje recibido: " + msg)
+       //-- Emitir un mensaje a todos los clientes conectados
+       io.emit('new_message', msg);
 
-   //-- Emitir un mensaje a todos los clientes conectados
-    io.emit('new_message', msg);
+     }
+
+
 
   });
 
