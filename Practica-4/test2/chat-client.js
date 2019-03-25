@@ -15,6 +15,9 @@ function main()
   //-- Caja con el mensaje a enviar
   var msg = document.getElementById("msg")
 
+  //-- Variable contador para borrar si hay muchos
+  var contador = 0
+
   //-- Cuando se aprieta el botón de enviar...
   send.onclick = () => {
 
@@ -29,6 +32,11 @@ function main()
   //-- en el párrafo
   socket.on('new_message', msg => {
     display.innerHTML = display.innerHTML + msg + "<br>";
+    contador = contador + 1;
+    if (contador == 10){
+      display.innerHTML = " " + msg + "<br>";
+      contador = 0;
+    }
   });
 
 }
