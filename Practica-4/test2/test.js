@@ -2,6 +2,7 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var usuario = 0;
+const reqServer = "<p style = color:DodgerBlue > Server:  ";
 
 //--Servir la pagina principal
 app.get('/', function(req, res){
@@ -24,9 +25,10 @@ http.listen(3000, function(){
 //-- Un nuevo cliente se ha conectado!
 io.on('connection', function(socket){
   console.log('--> Usuario conectado!');
+  saludo = reqServer + "Bienvenido!!!! (づ｡◕‿‿◕｡)づ" + "</p>"
 
   //Dar la Bienvenida al nuevo usuario
-  socket.emit('new_message','Bienvenido!!!! (づ｡◕‿‿◕｡)づ');
+  socket.emit('new_message',saludo);
 
   usuario = usuario + 1;
 
@@ -40,21 +42,21 @@ io.on('connection', function(socket){
    socket.on('new_message', msg => {
      if (msg == "/help"){
        console.log("Devolviendo lista de comandos")
-       var lista_comandos = "<br>" + "/help" + "<br>" + "/list" + "<br>" + "/hello" + "<br>" +"/date"
+       var lista_comandos = reqServer + "Lista de comandos" + "<br>" + "/help" + "<br>" + "/list" + "<br>" + "/hello" + "<br>" +"/date"
        socket.emit('new_message',lista_comandos);
      }
      else if (msg == "/list") {
        console.log("Entrando en list")
-       socket.emit('new_message',"<br>" +"Numero de usuarios conectados: " + usuario);
+       socket.emit('new_message',"<br>"+ reqServer +"Numero de usuarios conectados: " + usuario + "</p>");
      }
      else if (msg == "/hello") {
        console.log("Entrando en hola")
-        socket.emit('new_message',"<br>" +"Holaaaaa " + "~\(≧▽≦)/~");
+        socket.emit('new_message',reqServer + "<br>" +"Holaaaaa " + "~\(≧▽≦)/~");
 
      }else if (msg == "/date"){
        console.log("Devolviendo el Recurso Date")
        var f = new Date();
-       var fecha = "<br>" + f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
+       fecha = reqServer + f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear() + "</p>";
        socket.emit('new_message',fecha);
 
 

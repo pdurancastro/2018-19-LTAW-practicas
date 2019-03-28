@@ -33,6 +33,9 @@ function main()
     //-- Enviar el mensaje, con el evento "new_message"
     socket.emit('new_message', msg.value);
 
+    //-- Limpio la Caja
+    document.getElementById('msg').value = "";
+
     //-- Lo notificamos en la consola del navegador
     console.log("Mensaje emitido")
   }
@@ -42,7 +45,7 @@ function main()
   socket.on('new_message', msg => {
     display.innerHTML = display.innerHTML + msg + "<br>";
     contador = contador + 1;
-    if (contador == 10){
+    if (contador == 8){
       display.innerHTML = " " + msg + "<br>";
       contador = 0;
     }
