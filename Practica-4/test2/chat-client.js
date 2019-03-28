@@ -18,6 +18,15 @@ function main()
   //-- Variable contador para borrar si hay muchos
   var contador = 0
 
+  //-- Funciona ahora con la tecla enter
+
+  msg.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      document.getElementById("send").click();
+    }
+  });
+
   //-- Cuando se aprieta el botón de enviar...
   send.onclick = () => {
 
@@ -40,7 +49,7 @@ function main()
   });
 
   //--Cuando se recibe un mensaje del admin
-  
+
 
 
 }
