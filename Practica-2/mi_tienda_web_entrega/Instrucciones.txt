@@ -11,3 +11,8 @@
    productos[0].delete()
    productos[0].save()
    exit()
+
+   Por un lado cuando metemos cosas para la base de datos te declaras variables que
+   son las p1, p2 ....
+   Las guardas en la base de datos
+   Para modificarlas en la base de datos las llamas producto[0].character = "Yufine"
