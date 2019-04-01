@@ -1,0 +1,3 @@
+Arrancar el terminal
+
+node test.js
