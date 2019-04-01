@@ -1,0 +1,13 @@
+1º Arrancar python manage.py runserver
+2º Puedo modificar mi tienda
+3º Puedes abrir otro terminal y modificar la base de datos
+4º python manage.py shell
+
+
+  \-- Borrar productos base de datos
+  from mi_tienda.models import Product
+   productos = Product.objects.all()
+   len(productos)
+   productos[0].delete()
+   productos[0].save()
+   exit()

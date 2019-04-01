@@ -1,3 +1,6 @@
 Arrancar el terminal
 
 node test.js
+
+
+Posible mejora: Que el servidor sea capaz de diferenciar entre 4 usuarios
