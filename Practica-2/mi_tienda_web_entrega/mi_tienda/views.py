@@ -8,6 +8,7 @@ from mi_tienda.models import Product
 
 # Create your views here.
 def home_view (request):
+    #Quiero que me muestre la pagina en funcion de lo que pido
     return render(request, "index.html", {})
 
 def trailer (request):
@@ -23,6 +24,7 @@ def contact (request):
     return render(request, "contact.html",{})
 
 def search (request):
+
     #Quiero que me muestre la pagina en funcion de lo que pido
     return render(request, "search.html",{})
 
