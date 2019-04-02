@@ -26,11 +26,15 @@ def search (request):
     #Quiero que me muestre la pagina en funcion de lo que pido
     return render(request, "search.html",{})
 
-
 def list(request):
     objects = Product.objects.all()
     html = "<p>Listado de articulos</p>"
-    for elt in objects:
-        print(elt.name)
-        html += '<p>'+ elt.name + ' ' + str(elt.price) + '<p>'
-    return HttpResponse(html)
+    list_accounts = []
+
+    for producto in objects:
+        print(producto.name)
+        #html += '<p>'+ elt.name + ' ' + str(elt.price) + '<p>'
+        list_accounts.append(producto)
+
+    #return HttpResponse(html)
+    return render(request,'list.html',{'item_list':list_accounts})
