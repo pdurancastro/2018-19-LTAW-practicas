@@ -22,6 +22,11 @@ def patches (request):
 def contact (request):
     return render(request, "contact.html",{})
 
+def search (request):
+    #Quiero que me muestre la pagina en funcion de lo que pido
+    return render(request, "search.html",{})
+
+
 def list(request):
     objects = Product.objects.all()
     html = "<p>Listado de articulos</p>"
