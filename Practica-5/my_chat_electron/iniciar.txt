@@ -1,0 +1,8 @@
+npm install electron
+npm install socket.io-client
+
+
+
+//--- Para iniciar el programa
+1º Lanzar el servidor server.js
+2º Lanzar electron npm start

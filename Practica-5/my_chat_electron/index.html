@@ -1,15 +1,45 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>TEST!</title>
-    <link rel="stylesheet" href="mycss.css">
+    <title>MI CHAT</title>
     <script src="app.js"></script>
+    <style>
+      h1{color: blue;
+        text-align: center;
+        }
+      p{color: black;
+        text-align: center;
+        }
+      h4{color:black;
+        text-align: center;
+      }
+      .center{color:black;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        border: 3px solid RoyalBlue;
+        padding: 10px;
+        align: center;
+      }
+      .button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      body{
+        background-color: azure;
+      }
+    </style>
   </head>
   <body onload="main();">
-    <h3>MI PRIMERA APP EN ELECTRON!!!</h3>
+    <h1>Mi chat</h1>
+    <h4>El chat muestra hasta 8 mensajes por pantalla</h4>
     <br>
-    <button type="button" id="button">Click</button>
-    <p id="display"> </p>
+    <input id="msg" autocomplete="off" class="center" />
+    <br>
+    <button type="button" id="send" class="button">SEND</button>
+    <p id="display"></p>
   </body>
 </html>
