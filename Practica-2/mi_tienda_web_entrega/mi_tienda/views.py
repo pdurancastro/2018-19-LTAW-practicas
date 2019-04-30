@@ -23,10 +23,25 @@ def patches (request):
 def contact (request):
     return render(request, "contact.html",{})
 
+#Llamas a la funcion desde urls
+
 def search (request):
 
     #Quiero que me muestre la pagina en funcion de lo que pido
-    return render(request, "search.html",{})
+    Peticion = request.GET.get('Caja_Busqueda',None)
+    Cuentas = Product.objects.all()
+    Lista_de_cuentas = []
+
+    for producto in Cuentas:
+        #producto_database = producto.name
+        if Peticion == producto.name:
+            #print("Estos son los productos")
+            Lista_de_cuentas.append(producto)
+            print(Lista_de_cuentas)
+            print(producto.character)
+    #print(Peticion de productos)
+
+    return render(request, 'list.html',{'item_list':Lista_de_cuentas})
 
 def list(request):
     objects = Product.objects.all()

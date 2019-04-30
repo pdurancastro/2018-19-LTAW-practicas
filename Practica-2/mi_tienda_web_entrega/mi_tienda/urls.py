@@ -9,5 +9,5 @@ urlpatterns = [
     url(r'^accounts/', views.accounts),
     url(r'^patches/', views.patches),
     url(r'^contact/', views.contact),
-    url(r'^search/', views.search),
+    url(r'^action_search/', views.search),
 ]
