@@ -45,18 +45,27 @@
                         <p><a>Send Your information:</a><br />
 
                         <br />
+
+
+                        <!--Formulario de pedido -->
                         <div id="contact_form">
-                            <form id="form2" method="post" action="#">
+                            <form method="POST" >
+                              {% csrf_token %}
+                              {{form.as_p}}
                                 <fieldset>
-                                    <input id="con_name" type="text" name="Name" value="Name:" alt=""/><br />
-                                    <input id="con_email" type="text" name="con_email" value="Tlf:" alt=""/><br />
-                                    <input id="con_website" type="text" name="con_website" value="Cost:" alt=""/><br />
-                                    <textarea id="con_mess" name="con_mess" value="Order">Order:</textarea><br />
                                     <input type="submit" id="contact-submit" value="submit"/>
                                     <input type="button" id="contact-clear" value="clear"/>
                                 </fieldset>
                             </form>
+                            <div id="LISTA DE PRODUCTOS">
+                              <a href="/cliente">List of all Forms</a>
+                            </div>
                         </div>
+
+
+
+
+
                         </div>
                         <div class="contact_left_bot"></div>
                     </div>

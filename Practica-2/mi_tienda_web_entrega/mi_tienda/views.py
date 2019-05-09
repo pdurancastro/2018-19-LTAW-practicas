@@ -5,6 +5,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from mi_tienda.models import Product
+from mi_tienda.models import Pedido
+
+from mi_tienda.forms import formPedido
 
 # Create your views here.
 def home_view (request):
@@ -61,6 +64,23 @@ def search2 (request):
 
     return render(request, 'list.html',{'item_list':Lista_de_cuentas})
 
+def contact (request):
+    print("Estoy en contactoooo/Pedidooo")
+
+    form = formPedido(request.POST)
+
+    if form.is_valid():
+        form.save()
+        print("Guardandoooo")
+
+    else:
+        form = formPedido()
+
+    return render(request,'contact.html',{"form":form})
+
+
+
+
 def list(request):
     objects = Product.objects.all()
     html = "<p>Listado de articulos</p>"
@@ -73,3 +93,16 @@ def list(request):
 
     #return HttpResponse(html)
     return render(request,'list.html',{'item_list':list_accounts})
+
+
+def cliente(request):
+    objects = Pedido.objects.all()
+    html = "<p>Listado de clientes</p>"
+    list_client = []
+
+    for producto in objects:
+        #html += '<p>'+ elt.name + ' ' + str(elt.price) + '<p>'
+        list_client.append(producto)
+
+    #return HttpResponse(html)
+    return render(request,'cliente.html',{'item_list':list_client})

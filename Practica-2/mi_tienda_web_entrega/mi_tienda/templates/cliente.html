@@ -1,0 +1,30 @@
+{% load staticfiles %}
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body onload= "main();">
+  <h1>List of clients</h1>
+  <br>
+  <div id="wrap">
+
+      {% for item in item_list %}
+          <p>Name:{{item.name_user}}
+          Tlf: {{item.Tlf}}
+          Cost: {{item.cost}} $
+          Order: {{item.order}} </p>
+
+          <p> -------    </p>
+      {% endfor %}
+
+
+    <div id="content_top">
+      <div id="Return">
+        <a href="/contact">Return to contact</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

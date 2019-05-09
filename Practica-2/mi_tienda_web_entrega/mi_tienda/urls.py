@@ -11,4 +11,6 @@ urlpatterns = [
     url(r'^contact/', views.contact),
     url(r'^action_search/', views.search),
     url(r'^action_search2/', views.search2),
+    url(r'^cliente/', views.cliente),
+
 ]
