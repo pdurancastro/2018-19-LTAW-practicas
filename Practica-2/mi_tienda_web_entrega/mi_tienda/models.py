@@ -14,5 +14,5 @@ class Product (models.Model):
 class Pedido (models.Model):
     name_user = models.CharField(max_length=200)
     Tlf = models.IntegerField()
-    cost = models.IntegerField()
+    cost = models.FloatField()
     order = models.IntegerField()

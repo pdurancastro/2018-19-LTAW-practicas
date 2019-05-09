@@ -8,14 +8,25 @@
 <body onload= "main();">
   <h1>This are the products that matches your search</h1>
   <br>
-  <div>
-    {% for item in item_list %}
-        <p>{{item.name}} {{item.character}}</p>
-    {% endfor %}
-  </div>
+  <div id="wrap">
+    <div class="box_img2">
+      {% for item in item_list %}
+          <p>{{item.name}} {{item.character}} {{item.price}}</p>
 
-  <div id="Return">
-    <a href="/accounts">Return to the accounts</a>
+
+        <!--  {%if "{{item.name}}" == "Epic" %}
+            <img src="/static/images/gal1.png" alt="" title="" />
+          {% endif %}-->
+
+
+      {% endfor %}
+    </div>
+
+    <div id="content_top">
+      <div id="Return">
+        <a href="/accounts">Return to the accounts</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
