@@ -40,12 +40,34 @@ http.createServer(function (req, res) {
    console.log("Bienvenido al login")
    content = "Registrado! Cookie enviada al navegador!"
 
-   //-- ESTABLECER LA COOKIE!!
+   //-- Establecer la coookie
+   //res.setHeader('Content-Type', 'text/plain')
+   //res.write(content);
+   //res.end();
    res.setHeader('Set-Cookie', 'user=patriciaduran')
-
-   res.setHeader('Content-Type', 'text/plain')
-   res.write(content);
    res.end();
+   console.log("---->Creo Cookie")
+
+   if (cookie != ""){
+     console.log("Tienes Cookie!")
+
+     fs.readFile("login.html", function(err, data) {
+       res.writeHead(200, {'Content-Type': mime});
+       res.write(data);
+       return res.end();
+     });
+   }
+
+   //fs.readFile("login.html", function(err, data) {
+     //res.writeHead(200, {'Content-Type': mime});
+     //res.write(data);
+
+     //return res.end();
+
+   //});
+
+
+
 
  }else if (filename == "./myquery") {
 

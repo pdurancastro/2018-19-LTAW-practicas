@@ -19,6 +19,7 @@ http.createServer(function (req, res) {
    'html':'text/html',
    'png':'image/png',
    'jpg':'image/png',
+   'mp4' :'video/mp4',
    'css':'text/css'
  }
 
