@@ -19,7 +19,10 @@ http.createServer(function (req, res) {
    'html':'text/html',
    'png':'image/png',
    'jpg':'image/png',
-   'css':'text/css'
+   'css':'text/css',
+   'mp4' : 'video/mp4',
+   'js' : 'text/javascript',
+   '/' : 'text/html',
  }
 
  //-- Leer las cookies
@@ -45,18 +48,15 @@ http.createServer(function (req, res) {
    //res.write(content);
    //res.end();
    res.setHeader('Set-Cookie', 'user=patriciaduran')
-   res.end();
+   //res.end();
    console.log("---->Creo Cookie")
 
-   if (cookie != ""){
-     console.log("Tienes Cookie!")
-
      fs.readFile("login.html", function(err, data) {
-       res.writeHead(200, {'Content-Type': mime});
+       res.writeHead(200, {'Content-Type': 'text/html'});
        res.write(data);
        return res.end();
      });
-   }
+
 
    //fs.readFile("login.html", function(err, data) {
      //res.writeHead(200, {'Content-Type': mime});
@@ -65,6 +65,31 @@ http.createServer(function (req, res) {
      //return res.end();
 
    //});
+}else if (filename == "./myform"){
+  console.log("Se mando bien el formulario!!")
+
+   if (req.method == "POST") {
+     console.log("HOliii")
+
+     //Comienzo de tratar los datos de la cookies
+     cookie_splitted = cookie.split(" ");
+     cookie_splitted_items = cookie.split(/[item]+/);
+     console.log("Items: " + cookie_splitted);
+
+
+
+   }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
