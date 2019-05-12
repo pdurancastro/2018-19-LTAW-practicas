@@ -10,7 +10,7 @@ function cookie_carrito(item){
   productos = productos + 1;
   log = log + item.id + " ";
 
-  document.cookie = "The accounts added are: " + log + " in total: " + productos;
+  document.cookie = "The accounts added are:" + log + " :in total- " + productos+ ";";
 
   console.log(item);
   console.log(document.cookie);
