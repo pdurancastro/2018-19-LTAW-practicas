@@ -1,7 +1,7 @@
 function main(event)
 {
   //-- Traza de prueba
-  console.log("Hola!")
+  //console.log("Hola!")
 
   //-- Obtener el botón de VER del DOM
   var ver = document.getElementById('ver')
@@ -17,7 +17,7 @@ function main(event)
     //-- Crear objeto para hacer peticiones AJAX ya no es XML
     //-- Sigue usando la nomenclatura antigua
     m = new XMLHttpRequest();
-    m.open("GET","http://localhost:8080/myquery?param1=valor_caja", true);
+    m.open("GET","http://localhost:8080/myquery?param1=" + valor_caja, true);
 
     //-- Cuando la haya alguna noticia sobre la peticion
     //-- ejecuta este código
@@ -34,6 +34,7 @@ function main(event)
          resultado.innerHTML = "";
 
          //--Recorrer los productos del objeto JSON
+         console.log(o.productos.length)
          for (i=0; i < o.productos.length; i++) {
 
            //-- Añadir cada producto al párrafo de visualización

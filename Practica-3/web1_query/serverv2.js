@@ -2,6 +2,8 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 
+const Base_Datos = ["AcDienne", "AcKrau", "AcYufinne", "AcMerlin", "AcJeanneJalter", "AcJeanne", "AcFeh"]
+
 console.log("Arrancando servidor...")
 
 
@@ -146,14 +148,30 @@ http.createServer(function (req, res) {
 
    //-- Peticion paralela al servidor
    console.log("Estas en query")
-   content = ` {
-     "productos": ["Dienne", "Krau", "Yufinne"]
-   }
-   `
-   var params = q.query;
+   //content = ` {
+     //"productos": ["AcDienne", "AcKrau", "AcYufinne", "AcMerlin", "AcJeanneJalter", "AcJeanne", "AcFeh"]
+   //}
+   //`
 
-   console.log("Parametros: " + params.param1 + ' y ' + params.param2)
 
+
+   //--Letras que queremos asociar a cuenta
+   var letters = q.query;
+
+   console.log("Parametros: " + letters.param1)
+
+   var found =  [];
+
+    for (i=0; i< Base_Datos.length; i++){
+        if (Base_Datos[i].includes(letters.param1)){
+            found.push(Base_Datos[i]);
+        }
+    }
+
+   console.log("Producto: " + found)
+
+   //--NO CAMBIES EL NOMBRE DE PRODUCTOS !!
+   var content = JSON.stringify({productos:found})
    //-- Generar el mensaje de respuesta
    //-- IMPORTANTE! Hay que indicar que se trata de un objeto JSON
    //-- en la cabecera Content-Type
