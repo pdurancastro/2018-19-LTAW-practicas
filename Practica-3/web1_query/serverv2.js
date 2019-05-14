@@ -30,6 +30,7 @@ http.createServer(function (req, res) {
  console.log("Cookie: " + cookie)
 
 
+
  if (filename == "./"){
    console.log("-->Estoy en el INDEX")
    fs.readFile("index.html", function(err, data) {
@@ -58,13 +59,6 @@ http.createServer(function (req, res) {
      });
 
 
-   //fs.readFile("login.html", function(err, data) {
-     //res.writeHead(200, {'Content-Type': mime});
-     //res.write(data);
-
-     //return res.end();
-
-   //});
 }else if (filename == "./myform"){
   console.log("Se mando bien el formulario!!")
 
@@ -96,11 +90,11 @@ http.createServer(function (req, res) {
            <body>
              <h4>Order: `
       req.on('data', chunk => {
-      //-- Leer los datos (convertir el buffer a cadena)
+      //-- Read the data
       data = chunk.toString();
-      console.log("Data---->: " + data);
+      console.log("Datos obtenidos---->: " + data);
 
-      //Vamos a desglosar el resultado del formulario.
+      //Result of form
              data_splitted = data.split(/[=&+]+/);
              console.log("data_splitted:________" + data_splitted);
 
@@ -148,15 +142,12 @@ http.createServer(function (req, res) {
 
    }
 
-
-
-
  }else if (filename == "./myquery") {
 
    //-- Peticion paralela al servidor
    console.log("Estas en query")
    content = ` {
-     "productos": ["FPGA", "RISC-V", "74ls00"]
+     "productos": ["Dienne", "Krau", "Yufinne"]
    }
    `
    var params = q.query;
