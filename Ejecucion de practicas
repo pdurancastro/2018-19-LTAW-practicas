@@ -1,0 +1,13 @@
+Practica 1-->web1-->
+	node serverv2.js
+	localhost:8080
+
+Practica 2-->mi_tienda_web_entrega
+	python manage.py runserver 127.0.0.1:8080
+	Me falla el puerto 8000 por ello utilizo el 8080
+	
+	El formulario funciona de la siguiente manera
+	String-Numero-Numero-Numero
+	
+Practica 3-->web1_query-->server2.js
+	node serverv2.js
